@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mediainfo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mediainfo
+    environment:
+      - GOOGLE_CLIENT_URL=http://google-client:3000
+    volumes:
+      - ./:/opt/app
+    ports:
+      - 3001:3000
+
